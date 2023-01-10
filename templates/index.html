@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/style.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+          integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+</head>
+<body>
+<div class="testbox">
+    <form action="/predict" enctype="multipart/form-data" method="post">
+        <div class="banner">
+            <h1>New Member Registration</h1>
+        </div>
+        <div class="colums">
+            <div class="item">
+                <label for="Marque">Marque </label>
+                <input id="Marque" name="Marque" required type="text"/>
+            </div>
+            <div class="item">
+                <label for="Modele">Modele </label>
+                <input id="Modele" name="Modele" required type="text"/>
+            </div>
+            <div class="item">
+                <label for="Annee_Modele">Annee Modele </label>
+                <input id="Annee_Modele" name="Annee_Modele" required type="text"/>
+            </div>
+            <div class="item">
+                <label for="Puissance_fiscale">Puissance fiscale </label>
+                <input id="Puissance_fiscale" name="Puissance_fiscale" required type="number"/>
+            </div>
+            <div class="item">
+                <label for="Nombre_de_portes">Nombre de portes </label>
+                <input id="Nombre_de_portes" name="Nombre_de_portes" required type="number"/>
+            </div>
+            <div class="item">
+                <label for="Kilometrage">Kilometrage </label>
+                <input id="Kilometrage" name="Kilometrage" required type="text"/>
+            </div>
+        </div>
+        <div class="colums">
+            <div class="question">
+                <label>Boite de vitesses</label>
+                <div class="question-answer">
+                    <div>
+                        <input id="radio_1" name="Boite_de_vitesses" type="radio" value="Manuelle"/>
+                        <label class="radio" for="radio_1"><span>Manuelle</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_2" name="Boite_de_vitesses" type="radio" value="Automatique"/>
+                        <label class="radio" for="radio_2"><span>Automatique</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <label>Première main</label>
+                <div class="question-answer">
+                    <div>
+                        <input id="radio_3" name="Premiere_main" type="radio" value="Non"/>
+                        <label class="radio" for="radio_3"><span>Non</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_4" name="Premiere_main" type="radio" value="Oui"/>
+                        <label class="radio" for="radio_4"><span>Oui</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="colums">
+            <div class="question">
+                <label>Origine</label>
+                <div class="question-answer">
+                    <div>
+                        <input id="radio_9" name="Origine" type="radio" value="WW au Maroc"/>
+                        <label class="radio" for="radio_9"><span>WW au Maroc</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_10" name="Origine" type="radio" value="Dédouanée"/>
+                        <label class="radio" for="radio_10"><span>Dédouanée</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_11" name="Origine" type="radio" value="Importée neuve"/>
+                        <label class="radio" for="radio_11"><span>Importée neuve</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_12" name="Origine" type="radio" value="Pas encore dédouanée"/>
+                        <label class="radio" for="radio_12"><span>Pas encore dédouanée</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <label>etat</label>
+                <div class="question-answer">
+                    <div>
+                        <input id="radio_13" name="etat" type="radio" value="Excellent"/>
+                        <label class="radio" for="radio_13"><span>Excellent</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_14" name="etat" type="radio" value="Très bon"/>
+                        <label class="radio" for="radio_14"><span>Très bon</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_15" name="etat" type="radio" value="bon"/>
+                        <label class="radio" for="radio_15"><span>bon</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_16" name="etat" type="radio" value="Pour Pièces"/>
+                        <label class="radio" for="radio_16"><span>Pour Pièces</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_17" name="etat" type="radio" value="Endommagé"/>
+                        <label class="radio" for="radio_17"><span>Endommagé</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="colums">
+            <div class="question">
+                <label>Type du carburant</label>
+                <div class="question-answer">
+                    <div>
+                        <input id="radio_5" name="Type_de_carburant" type="radio" value="Diesel"/>
+                        <label class="radio" for="radio_5"><span>Diesel</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_6" name="Type_de_carburant" type="radio" value="Essence"/>
+                        <label class="radio" for="radio_6"><span>Essence</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_7" name="Type_de_carburant" type="radio" value="Hypride"/>
+                        <label class="radio" for="radio_7"><span>Hypride</span></label>
+                    </div>
+                    <div>
+                        <input id="radio_8" name="Type_de_carburant" type="radio" value="Electrique"/>
+                        <label class="radio" for="radio_8"><span>Electrique</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <div>
+                    <label class="check" for="radio_18"><span>ABS</span></label>
+                    <input id="radio_18" name="ABS" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_19"><span>Airbags</span></label>
+                    <input id="radio_19" name="Airbags" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_20_"><span>Climatisation</span></label>
+                    <input class="check" id="radio_20_" name="Climatisation" type="checkbox"/>
+                </div>
+            </div>
+        </div>
+        <div class="colums">
+            <div class="question">
+                <div>
+                    <label class="check" for="radio_20"><span>Sieges cuir</span></label>
+                    <input id="radio_20" name="Sieges_cuir" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_21"><span>Radar de recul</span></label>
+                    <input id="radio_21" name="Radar_de_recul" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_22"><span>Camera de recul</span></label>
+                    <input class="check" id="radio_22" name="Camera_de_recul" type="checkbox"/>
+                </div>
+            </div>
+            <div class="question">
+                <div>
+                    <label class="check" for="radio_23"><span>Vitres electriques</span></label>
+                    <input class="check" id="radio_23" name="Vitres_electriques" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_24"><span>ESP</span></label>
+                    <input class="check" id="radio_24" name="ESP" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_25"><span>Regulateur de vitesse</span></label>
+                    <input class="check" id="radio_25" name="Regulateur_de_vitesse" type="checkbox"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="colums">
+            <div class="question">
+                <div>
+                    <label class="check" for="radio_26"><span>Toit ouvrant</span></label>
+                    <input class="check" id="radio_26" name="Toit_ouvrant" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_27"><span>Limiteur de vitesse</span></label>
+                    <input class="check" id="radio_27" name="Limiteur_de_vitesse" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_28"><span>CD/MP3/Bluetooth</span></label>
+                    <input class="check" id="radio_28" name="CD_MP3_Bluetooth" type="checkbox"/>
+                </div>
+            </div>
+            <div class="question">
+                <div>
+                    <label class="check" for="radio_29"><span>Ordinateur de bord</span></label>
+                    <input class="check" id="radio_29" name="Ordinateur_de_bord" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_30"><span>Verrouillage à distance</span></label>
+                    <input class="check" id="radio_30" name="Verrouillage_centralise_a_distance" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_31"><span>Jantes aluminium</span></label>
+                    <input class="check" id="radio_31" name="Jantes_aluminium" type="checkbox"/>
+                </div>
+                <div>
+                    <label class="check" for="radio_32"><span>GPS</span></label>
+                    <input class="check" id="radio_32" name="Systeme_de_navigation_GPS" type="checkbox"/>
+                </div>
+            </div>
+        </div>
+        <div class="btn-block">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
